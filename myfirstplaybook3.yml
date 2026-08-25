@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: task01
+    apt: 
+      name: git
+      state: present 
+  - name: task02
+    apt:
+      name: tree
+      state: absent

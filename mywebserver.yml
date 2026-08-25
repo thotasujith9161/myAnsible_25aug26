@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: i want to install apache2 webserver on debian nodes (apt-get install apache2)
+    apt:
+     name: apache2
+     state: present
+
+  - name: i want to stop apache2 webserver on debian nodes (service apache2 stop)
+    service:
+     name: apache2
+     state: stopped
