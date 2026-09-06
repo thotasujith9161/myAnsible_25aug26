@@ -17,10 +17,6 @@
 172.31.22.126
 
 [mywebservers:vars]
-ansible_user=ubuntu
-ansible_ssh_private_key_file=/Users/sujithkumarthota/Downloads/JSFrogkey.pem
-ansible_python_interpreter=/usr/bin/python3
-ansible_become=true
 mywebpackonubuntu= apache22222
 mywebpackonredhat= httpd
 
