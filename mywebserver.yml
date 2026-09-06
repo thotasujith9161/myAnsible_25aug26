@@ -5,21 +5,21 @@
   tasks:
   - name: i want to install apache2 webserver on debian nodes (apt-get install apache2)
     apt:
-     name: apache2
+     name: "{{mywebpackonubuntu}}"
      state: present
     when: ansible_os_family == "Debian" 
   - name: i want to start apache2 webserver on debian nodes (service apache2 start)
     service:
-     name: apache2
+     name: "{{mywebpackonubuntu}}"
      state: started
     when: ansible_os_family == "Debian" 
   - name: i want to install httpd webserver on redhat nodes (yum install httpd)
     yum:
-     name: httpd
+     name: "{{mywebpackonredhat}}"
      state: present
     when: ansible_os_family == "RedHat"
   - name: i want to start httpd webserver on redhat nodes (service httpd start)
     service:
-     name: httpd
+     name: "{{mywebpackonredhat}}"
      state: started
     when: ansible_os_family == "RedHat"
