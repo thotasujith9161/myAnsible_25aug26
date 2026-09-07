@@ -1,0 +1,15 @@
+---
+- hosts: mywebservers
+  become: yes
+  tasks:
+    - name: install java on debian nodes (apt-get install openjdk-21-jdk)
+      apt:
+       name: "{{ myjavapackageonubuntu }}"
+       state: present
+      when: ansible_os_family == "Debian"
+
+    - name: install java8 on redhat nodes (yum install java-21-amazon-corretto-devel)  
+      yum: 
+       name: "{{ myjavapackageonredhat }}"
+       state: present
+      when: ansible_os_family == "RedHat"
