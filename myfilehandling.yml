@@ -1,5 +1,5 @@
 ---
-- hosts: all 
+- hosts: mywebservers
   become: yes
   tasks:
   - include_tasks: myfile.yml
