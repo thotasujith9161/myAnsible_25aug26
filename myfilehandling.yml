@@ -11,3 +11,7 @@
     file:
       state: directory
       path: /home/maha/myfolder
+  - name: copy my static file into node side
+    copy:
+      src: mystaticfile
+      dest: /home/maha/myfolder
