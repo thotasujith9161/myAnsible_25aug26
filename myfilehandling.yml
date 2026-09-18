@@ -15,3 +15,7 @@
     copy:
       src: mystaticfile
       dest: /home/maha/myfolder
+  - name: copy myindex.j2 file into nodes
+    template:
+        src: myindex.j2
+        dest: /var/www/html/index.html    
