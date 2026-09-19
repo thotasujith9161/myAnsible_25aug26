@@ -1,3 +1,5 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # vars file for mywebrole
+mywebrole_var1: "This is mywebrole variable 1"
+mywebserver_var2: "apache2222"
