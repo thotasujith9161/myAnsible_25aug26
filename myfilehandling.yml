@@ -7,15 +7,25 @@
     apt:
       name: apache2
       state: present
+    notify: restart webserver
   - name: i want to create a folder
     file:
       state: directory
       path: /home/maha/myfolder
+
   - name: copy my static file into node side
     copy:
       src: mystaticfile
       dest: /home/maha/myfolder
+
   - name: copy myindex.j2 file into nodes
     template:
         src: myindex.j2
-        dest: /var/www/html/index.html    
+        dest: /var/www/html/index.html
+    notify: restart webserver   
+     
+  handlers:
+  - name: Restart webserver
+    service:
+      name: apache2
+      state: restarted
