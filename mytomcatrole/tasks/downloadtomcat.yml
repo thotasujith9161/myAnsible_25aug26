@@ -14,5 +14,5 @@
 - name: extract tomcat
   ansible.builtin.unarchive:
     src: /home/maha/apache-tomcat-10.1.60.tar.gz
-    dest: /home/maha
+    dest: /opt/tomcat
     remote_src: yes
