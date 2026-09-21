@@ -17,4 +17,4 @@
     dest: /opt/tomcat
     remote_src: yes
     extra_opts:
-    - -C
+    - --strip-components=1
