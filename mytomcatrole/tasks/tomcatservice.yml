@@ -3,6 +3,3 @@
   ansible.builtin.copy:
     src: files/tomcat.service
     dest: /etc/systemd/system/tomcat.service
-    user: root
-    group: root
-    mode: '0644'
