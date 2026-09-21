@@ -1,6 +1,6 @@
 ---
 - name: copy tomcat.service to /etc/systemd/system
-  copy:
+  ansible.builtin.copy:
     src: files/tomcat.service
     dest: /etc/systemd/system/tomcat.service
     user: root
