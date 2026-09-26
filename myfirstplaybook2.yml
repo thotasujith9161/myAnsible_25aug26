@@ -1,8 +1,0 @@
----
-- hosts: all
-  become: yes
-  tasks:
-  - name: task01
-    apt:
-     name: apache2
-     state: present

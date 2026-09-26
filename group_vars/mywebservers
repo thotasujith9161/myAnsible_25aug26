@@ -1,5 +1,0 @@
----
-mywebpackonubuntu: apache2
-mywebpackonredhat: httpd
-myjavapackageonubuntu: openjdk-21-jdk
-myjavapackageonredhat: java-21-amazon-corretto-devel
